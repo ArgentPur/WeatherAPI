@@ -17,11 +17,22 @@
 <h1>Weather Report</h1>
 
 <body>
+  <div class="row">
+    <input type="text" class="inputText">
+   <input type="submit" value="Submit" class="button">
+  </div>
+  <div class="display">
+    <h1 class="name"></h1>
+    <p class="desc"></p>
+    <p class="temp"></p>
+  </div>
+    
     <div class="jumbotron jumbotron-fluid">
+      <div class= "col-md-4"></div>
         <div class="container">
           <h1 class="display-4">Current Conditions</h1>
-          <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
-          <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+          <p id= "locale" class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+          <p id= "todayTemp" class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
         </div>
     </div>
 
