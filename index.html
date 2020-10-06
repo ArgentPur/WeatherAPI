@@ -6,20 +6,15 @@
     <title>Weather API</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <style>
-        .lead{
-            background-color: rgb(145, 130, 211);
-
-        }
-    </style>
 
 </head>
+<div class= "col-md-4">
 <h1>Weather Report</h1>
-
+</div>
 <body>
   <div class="row">
     <input type="text" class="inputText">
-   <input type="submit" value="Submit" class="button">
+   <input type="submit" value="Get Weather" class="button">
   </div>
   <div class="display">
     <h1 class="name"></h1>
@@ -33,6 +28,7 @@
           <h1 class="display-4">Current Conditions</h1>
           <p id= "locale" class="lead"></p>
           <p id= "todayTemp" class="lead"></p>
+          <p id= "condition" class="lead"></p>
         </div>
     </div>
 

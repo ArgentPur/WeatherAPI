@@ -33,13 +33,17 @@ $(".button").on("click", function() {
        
 
        console.log(data.name);
-       console.log(data.main["temp"])
+       console.log(data.main["temp"]);
+       console.log(data.weather[0]["description"])
 
        var myJSON = JSON.stringify(data.name);
        document.getElementById("locale").innerHTML = myJSON;
 
        var myJSONA = JSON.stringify(data.main["temp"]);
        document.getElementById("todayTemp").innerHTML = myJSONA;
+
+       var myJSONB = JSON.stringify(data.weather[0]["description"])
+       document.getElementById("condition").innerHTML = myJSONB;
 
     }) 
 
@@ -51,7 +55,14 @@ $(".button").on("click", function() {
 
     var uvJSON = JSON.stringify(data.value);
     document.getElementById("uvInfo").innerHTML = uvJSON;
+    
+    if(uvJSON > 4){
+        alert("The UV index is high! You will get fried!")
+    }
 
+    if(uvJSON <4){
+        alert("UV index is low.")
+    }
 
    })  
    
@@ -65,19 +76,19 @@ $(".button").on("click", function() {
     console.log(data.list[24].main["temp"]);
     console.log(data.list[32].main["temp"]);
 
-    var aJSON = JSON.stringify(data.list[0].main["temp"] + "F");
+    var aJSON = JSON.stringify(data.list[0].main["temp"] + "F") + "Tomorrow";
     document.getElementById("oneDay").innerHTML = aJSON;
 
-    var bJSON = JSON.stringify(data.list[8].main["temp"] + "F");
+    var bJSON = JSON.stringify(data.list[8].main["temp"] + "F") + "2 day";
     document.getElementById("twoDay").innerHTML = bJSON;
 
-    var cJSON = JSON.stringify(data.list[16].main["temp"] + "F");
+    var cJSON = JSON.stringify(data.list[16].main["temp"] + "F") +"3 day";
     document.getElementById("threeDay").innerHTML = cJSON;
 
-    var dJSON = JSON.stringify(data.list[24].main["temp"] + "F");
+    var dJSON = JSON.stringify(data.list[24].main["temp"] + "F") + "4 day";
     document.getElementById("fourDay").innerHTML = dJSON;
 
-    var eJSON = JSON.stringify(data.list[32].main["temp"] + "F");
+    var eJSON = JSON.stringify(data.list[32].main["temp"] + "F") + "5 day";
     document.getElementById("fiveDay").innerHTML = eJSON;
     
    })
