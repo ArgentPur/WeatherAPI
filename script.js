@@ -35,6 +35,12 @@ $(".button").on("click", function() {
        console.log(data.name);
        console.log(data.main["temp"])
 
+       var myJSON = JSON.stringify(data.name);
+       document.getElementById("locale").innerHTML = myJSON;
+
+       var myJSONA = JSON.stringify(data.main["temp"]);
+       document.getElementById("todayTemp").innerHTML = myJSONA;
+
     }) 
 
    fetch(uvURL)
@@ -42,6 +48,11 @@ $(".button").on("click", function() {
    .then(data => {
 
     console.log(data.value);
+
+    var uvJSON = JSON.stringify(data.value);
+    document.getElementById("uvInfo").innerHTML = uvJSON;
+
+
    })  
    
    fetch(fiveDayURL)
@@ -53,8 +64,25 @@ $(".button").on("click", function() {
     console.log(data.list[16].main["temp"]);
     console.log(data.list[24].main["temp"]);
     console.log(data.list[32].main["temp"]);
+
+    var aJSON = JSON.stringify(data.list[0].main["temp"] + "F");
+    document.getElementById("oneDay").innerHTML = aJSON;
+
+    var bJSON = JSON.stringify(data.list[8].main["temp"] + "F");
+    document.getElementById("twoDay").innerHTML = bJSON;
+
+    var cJSON = JSON.stringify(data.list[16].main["temp"] + "F");
+    document.getElementById("threeDay").innerHTML = cJSON;
+
+    var dJSON = JSON.stringify(data.list[24].main["temp"] + "F");
+    document.getElementById("fourDay").innerHTML = dJSON;
+
+    var eJSON = JSON.stringify(data.list[32].main["temp"] + "F");
+    document.getElementById("fiveDay").innerHTML = eJSON;
     
-   })  
+   })
+   
+   
    
    
 })
