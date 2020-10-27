@@ -1,7 +1,7 @@
 
 var weathURL= "https://api.openweathermap.org/data/2.5/weather?lat=41.392780&lon=-82.014999&units=imperial&appid=cf895b6ea140ccd8bf7133bda48dc02f";
 var fiveDayURL="https://api.openweathermap.org/data/2.5/forecast?lat=41.392780&lon=-82.014999&units=imperial&appid=cf895b6ea140ccd8bf7133bda48dc02f";
-var uvURL="http://api.openweathermap.org/data/2.5/uvi?lat=41.392780&lon=-82.01499&appid=cf895b6ea140ccd8bf7133bda48dc02f"
+var uvURL="https://api.openweathermap.org/data/2.5/uvi?lat=41.392780&lon=-82.01499&appid=cf895b6ea140ccd8bf7133bda48dc02f"
 $.ajax({
     url: weathURL,
     method: "GET",
