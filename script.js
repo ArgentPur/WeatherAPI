@@ -70,7 +70,7 @@ $(".button").on("click", function() {
    .then(response => response.json())
    .then(data => {
 
-    console.log(data.list[0].main[temp]);
+    console.log(data.list[0].main["temp"]);
     console.log(data.list[8].main["temp"]);
     console.log(data.list[16].main["temp"]);
     console.log(data.list[24].main["temp"]);
