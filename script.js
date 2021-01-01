@@ -70,25 +70,25 @@ $(".button").on("click", function() {
    .then(response => response.json())
    .then(data => {
 
-    console.log(data.list[0].main["temp"]);
+    console.log(data.list[0].main[temp]);
     console.log(data.list[8].main["temp"]);
     console.log(data.list[16].main["temp"]);
     console.log(data.list[24].main["temp"]);
     console.log(data.list[32].main["temp"]);
 
-    var aJSON = JSON.stringify(data.list[0].main["temp"] + "F") + "Tomorrow";
+    var aJSON = JSON.stringify(data.list[0].main["temp"] + " F") + "Tomorrow";
     document.getElementById("oneDay").innerHTML = aJSON;
 
-    var bJSON = JSON.stringify(data.list[8].main["temp"] + "F") + "2 day";
+    var bJSON = JSON.stringify(data.list[8].main["temp"] + " F") + "2 day";
     document.getElementById("twoDay").innerHTML = bJSON;
 
-    var cJSON = JSON.stringify(data.list[16].main["temp"] + "F") +"3 day";
+    var cJSON = JSON.stringify(data.list[16].main["temp"] + " F") +"3 day";
     document.getElementById("threeDay").innerHTML = cJSON;
 
-    var dJSON = JSON.stringify(data.list[24].main["temp"] + "F") + "4 day";
+    var dJSON = JSON.stringify(data.list[24].main["temp"] + " F") + "4 day";
     document.getElementById("fourDay").innerHTML = dJSON;
 
-    var eJSON = JSON.stringify(data.list[32].main["temp"] + "F") + "5 day";
+    var eJSON = JSON.stringify(data.list[32].main["temp"] + " F") + "5 day";
     document.getElementById("fiveDay").innerHTML = eJSON;
     
    })
