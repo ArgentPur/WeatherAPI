@@ -1,3 +1,19 @@
 .display-4 {
-    border-bottom: 5rem;
+    border-bottom: 50rem;
+}
+
+#now {
+    background: linear-gradient(rgb(8, 24, 116), rgb(188, 193, 223));
+}
+
+.linear1 {
+    background: linear-gradient(to top right, rgb(240, 28, 28), yellow);
+}
+
+.linear2 {
+    background: linear-gradient(to top right, rgb(47, 49, 185), rgb(130, 131, 229));
+}
+
+.head {
+    padding-left: 3em;
 }
